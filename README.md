@@ -2,6 +2,9 @@
 
 - Create React App
 - Configured TailwindCSS
+- Header
+- Login Form
+- Sign up Form
 
 # Features
 
@@ -18,3 +21,12 @@
 - NetflixGPT
   - Search Bar
   - Movie Suggestions
+
+# git repo
+
+git remote add origin https://github.com/khyatirpatel/netflix-gpt.git
+git branch -M main
+git push -u origin main
+git add .
+git commit -m "initial commit"
+git push -u origin main
