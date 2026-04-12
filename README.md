@@ -8,6 +8,14 @@
 - Sign up Form
 - Form Validation
 - useRef Hook
+- Firebase Setup
+- Deploying our app to production
+- Create SignUp User Account
+- Implement Sign In user Api
+- Created Redux Store with userSlice
+- Implemented Sign out
+- Update Profile
+- Fetch from TMDB Movies
 
 # Features
 
@@ -33,3 +41,8 @@ git push -u origin main
 git add .
 git commit -m "initial commit"
 git push -u origin main
+
+| Method                 | Behavior             |
+| ---------------------- | -------------------- |
+| `window.location.href` | Reloads page 🔄      |
+| `navigate()`           | Smooth navigation ⚡ |
