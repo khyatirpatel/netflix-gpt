@@ -1,4 +1,4 @@
-import React, { useState, useRef, useDebugValue } from "react";
+import React, { useState, useRef } from "react";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
 import {
@@ -7,14 +7,13 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const name = useRef(null);
@@ -46,8 +45,7 @@ const Login = () => {
           console.log("🚀 ~ handleButtonClick ~ user:", user);
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL:
-              "https://pbs.twimg.com/profile_images/1403468321580802054/UjlORA1U_400x400.jpg",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -60,7 +58,6 @@ const Login = () => {
                   photoURL: photoURL,
                 }),
               );
-              navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error.message);
@@ -82,7 +79,6 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log("🚀 ~ handleButtonClick ~ user:", user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
