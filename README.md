@@ -68,6 +68,16 @@
 
 - Before starting the project please add .env file and add TMDB and OPENAI KEY into it.
 
+# Quick comparison
+
+| Option         | Free?              | Limits       | Ease       |
+| -------------- | ------------------ | ------------ | ---------- |
+| OpenAI         | ❌ (needs billing) | Very limited | ⭐⭐⭐⭐   |
+| Gemini         | ✅                 | High         | ⭐⭐⭐⭐⭐ |
+| Groq           | ✅                 | Medium       | ⭐⭐⭐⭐   |
+| OpenRouter     | ✅                 | Varies       | ⭐⭐⭐     |
+| Local (Ollama) | ✅                 | Unlimited    | ⭐⭐       |
+
 # git repo
 
 git remote add origin https://github.com/khyatirpatel/netflix-gpt.git

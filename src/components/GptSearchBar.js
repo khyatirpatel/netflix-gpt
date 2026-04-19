@@ -1,4 +1,4 @@
-import openai from "../utils/openai";
+import groq from "../utils/groq";
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import lang from "../utils/languageConstants";
@@ -32,19 +32,26 @@ const GptSearchBar = () => {
       searchText.current.value +
       ". only give me names of 5 movies, comma seperated like the example result given ahead. Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya";
 
-    const gptResults = await openai.chat.completions.create({
-      messages: [{ role: "user", content: gptQuery }],
-      model: "gpt-3.5-turbo",
+    // ✅ GROQ API CALL
+    const gptResults = await groq.chat.completions.create({
+      messages: [
+        {
+          role: "user",
+          content: gptQuery,
+        },
+      ],
+      model: "llama-3.1-8b-instant",
     });
 
-    if (!gptResults.choices) {
-      // TODO: Write Error Handling
-    }
+    if (!gptResults.choices?.[0]?.message?.content) return;
 
     console.log(gptResults.choices?.[0]?.message?.content);
 
     // Andaz Apna Apna, Hera Pheri, Chupke Chupke, Jaane Bhi Do Yaaro, Padosan
-    const gptMovies = gptResults.choices?.[0]?.message?.content.split(",");
+    const gptMovies = gptResults.choices?.[0]?.message?.content
+      .split(",")
+      .map((movie) => movie.trim())
+      .filter(Boolean);
 
     // ["Andaz Apna Apna", "Hera Pheri", "Chupke Chupke", "Jaane Bhi Do Yaaro", "Padosan"]
 
