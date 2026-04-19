@@ -96,17 +96,18 @@ git push -u origin main
 
 npm install groq-sdk
 
-You can get your Groq API key from the official Groq developer platform here:
+# 👉 Main docs:
+
+https://console.groq.com/docs
+
+# You can get your Groq API key from the official Groq developer platform here:
 
 👉 https://console.groq.com/keys
 
 # Step-by-step to get your API key
 
 1. Go to Groq Console
-
-Open:
-👉 https://console.groq.com/
-
+   👉 https://console.groq.com/
 2. Sign in
    Use Google / GitHub / email login
 3. Go to API Keys
@@ -120,7 +121,6 @@ Open:
 5. Copy the key
 
 It will look like:
-
 gsk\_**\*\***\*\***\*\***\*\***\*\***\*\***\*\***
 
 ⚠️ You will NOT be able to see it again — copy it immediately.
@@ -128,20 +128,17 @@ gsk\_**\*\***\*\***\*\***\*\***\*\***\*\***\*\***
 # What to fill here
 
 1. Display Name
-
-Just give any name like:
-movie-app
-netflixgpt
-react-project
-
-👉 This is only for YOU (not important for code)
+   Just give any name like:
+   movie-app
+   netflixgpt
+   react-project
+   👉 This is only for YOU (not important for code)
 
 2. Expiration
-
-You selected:
-No expiration ✅ (good choice)
-👉 Keep this as-is
-🚀 Now do this
+   You selected:
+   No expiration ✅ (good choice)
+   👉 Keep this as-is
+   🚀 Now do this
 
 Click:
 👉 Submit
