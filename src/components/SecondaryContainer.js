@@ -1,8 +1,3 @@
-// MovieList - Popular - MovieCard * n
-// MovieList - NowPlaying - MovieCard * n
-// MovieList - Trending - MovieCard * n
-// MovieList - Horror - MovieCard * n
-
 import { useSelector } from "react-redux";
 import MovieList from "./MovieList";
 

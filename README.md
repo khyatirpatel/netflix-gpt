@@ -27,7 +27,7 @@
 - Planning for MainContauiner & secondary container
 - Fetch Data for Trailer Video
 - Update Store with Trailer Video Data
-- Embedded the Youtube video and make it autoplay and mute
+- Embedded the Yotube video and make it autoplay and mute
 - Tailwind Classes to make Main Container look awesome
 - Build Secondary Component
 - Build Movie List
@@ -35,22 +35,38 @@
 - TMDB Image CDN URL
 - Made the Browsre page amazing with Tailwind CSS
 - usePopularMovies Custom hook
+- GPT Search Page
+- GPT Search Bar
+- (BONUS) Multi-language Feature in our App)
+- Get Open AI Api Key
+- Gpt Search API Call
+- fetched gptMoviesSuggestions from TMDB
+- created gptSlice added data
+- Resused Movie List component to make movie suggestion container
+- Memoization
+- Added .env file
+- Adding .env file to gitignore
+- Made our Site Responsive
 
 # Features
 
 - Login/Sign Up
-  - Sign In/Sign up form
-  - redirect to browse page
+  - Sign In /Sign up Form
+  - redirect to Browse Page
 - Browse (after authentication)
   - Header
   - Main Movie
-    - Trailer in background
+    - Tailer in Background
     - Title & Description
-    - MovieSuggetions
-      - Movie List \* N
+    - MovieSuggestions
+      - MovieLists \* N
 - NetflixGPT
   - Search Bar
   - Movie Suggestions
+
+# Project Setup
+
+- Before starting the project please add .env file and add TMDB and OPENAI KEY into it.
 
 # git repo
 
